@@ -1,0 +1,1522 @@
+/* ------------------------------------------------------------------
+
+THIS CSS FILE IS LOCKED!
+
+Madmanimation by Anthony Calzadilla with hindrance from Andy Clarke
+
+------------------------------------------------------------------ */
+
+/* 
+SCENE 01: Don Draper pauses in the doorway of his Manhattan office. 
+Everything except fan blades are still. 
+Don’s desk is littered with bottles and glasses.
+*/
+
+/* 
+
+http://developer.apple.com/library/safari/#documentation/
+AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html
+
+Specifies whether the effects of an animation are apparent 
+before the animation starts and after it ends.
+
+none: The effects of the animation are apparent only 
+during the defined duration of the animation.
+
+forwards: The animation’s final keyframe continues to 
+apply after the final iteration of the animation completes.
+
+backwards: The animation’s initial keyframe is applied as 
+soon as the animation style is applied to an element. 
+This only affects animations that have a nonzero value 
+for -webkit-animation-delay.
+
+both: The animation’s initial keyframe is applied as soon 
+as the animation style is applied to an element, and the 
+animation’s final keyframe continues to apply after the 
+final iteration of the animation completes. The initial 
+keyframe only affects animations that have a nonzero 
+value for -webkit-animation-delay.
+
+*/
+
+.go #blk-curtain {
+ background-color : rgb(0,0,0);
+ width : 100%;
+ height : 579px;
+ opacity : 0;
+-webkit-animation : fadeout 2s 1 normal;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes fadeout {
+ 0% { opacity : 1; 
+-webkit-animation-timing-function : ease-out; }
+ 100% { 
+ opacity : 0; 
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #bg-01 {
+ top : 0;
+ left : 0;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : bg-zoomout-01 6s 1;
+-webkit-animation-fill-mode : both; }
+
+
+/*weird WEIRD bug, if you convert the 5% BELOW TO 50px the background animation gets 'jittery'*/
+@-webkit-keyframes bg-zoomout-01 {
+ 0% { -webkit-transform : translate3d(-5%,0,0) scale3d(1.05,1.05,1.05);
+-webkit-animation-timing-function : ease-out; }
+ 100% { -webkit-transform : translate3d(0,0,0) scale3d(1,1,1);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #fan-01 {
+ left : 550px;
+ top : 256px;
+ width : 50px;
+ height : 58px; }
+
+.go #fan-blade {
+ top : 5px;
+ left : 5px;
+ width : 40px;
+ height : 40px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : fan-rotate-01 18s 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes fan-rotate-01 {
+ 0% { -webkit-transform : rotateZ(0deg); }
+ 100% { -webkit-transform : rotateZ(900deg); }
+ }
+
+.go #man-01 {
+ top : -50px; 
+ left : 575px;
+ width : 532px;
+ height : 747px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : man-zoomout-01 6s 500ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-zoomout-01 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) scale3d(1.05,1.05,1.05);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,0,0) scale3d(.8,.8,.8);
+-webkit-animation-timing-function : ease; }
+}
+
+/* 
+SCENE 02: Don walks slowly into the room, his shoes reflected in the highly polished floor.
+*/
+
+.go h1#title-02 {
+ top : 450px;
+ left : 320px; }
+
+.go #bg-02{
+ left : 0;
+ top : 0; }
+
+.go #r-foot-02{
+ width : 491px;
+ height : 440px; }
+
+.go #r-shin-02 {
+ top : -70px;
+ left : -10px;
+ width : 317px;
+ height : 395px;
+-webkit-transform-origin : 0 0;
+-webkit-animation : rotate-shin-02 1s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes rotate-shin-02 {
+/*-webkit-transform : translate3d(-01.953125%,-03.454231%,0) rotateZ(5deg); EDITED 2/27/2011*/	
+ 0% {
+-webkit-transform : translate3d(-20px,-20px,0) rotateZ(5deg);
+-webkit-animation-timing-function : ease-out; }
+ 70% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+/*-webkit-transform : translate3d(-2.03666%,0,0) rotateZ(2deg); EDITED 2/27/2011*/		
+-webkit-transform : translate3d(-20px,0,0) rotateZ(2deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #r-leg-02 {
+ left : 500px;
+ width : 495px;
+ height : 75.993092%;
+-webkit-transform-origin : 0 100%;
+-webkit-animation : rotate-leg-02 1s 1; 	
+-webkit-animation-fill-mode : both;
+-webkit-transform : rotateZ(-15deg); }
+
+@-webkit-keyframes rotate-leg-02 {
+ 0% {
+/*-webkit-transform : translate3d(-01.953125%,-03.454231%,0) rotateZ(-15deg); EDITED 2/27/2011*/	
+-webkit-transform : translate3d(-20px,-20px,0) rotateZ(-15deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #r-shadow {
+ top : 390px;
+ left : 500px;
+ width : 497px;
+ height : 504px;
+-webkit-transform-origin : 0 0;
+-webkit-animation : rotate-shadow-r-02 1s 1; 	
+-webkit-animation-fill-mode : both;
+-webkit-transform : rotateZ(15deg); }
+
+@-webkit-keyframes rotate-shadow-r-02 {
+ 0% {
+/*-webkit-transform : translate3d(01.953125%,03.454231%,0) rotateZ(15deg); EDITED 2/27/2011*/		
+-webkit-transform : translate3d(20px,20px,0) rotateZ(15deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #l-leg-02 {
+ top : 0;
+ left : -250px;
+ width : 530px;
+ height : 470px;
+-webkit-animation : leg-l-02 1s 1s 1; 
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes leg-l-02 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+/*-webkit-transform : translate3d(12.207031%,-12.08981%,0) rotateZ(5deg); EDITED 2/27/2011*/	
+-webkit-transform : translate3d(125px,-70px,0) rotateZ(5deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #l-shadow {	
+ top : 425px;
+ left : -320px;
+ height : 557px;
+ width : 596px;
+-webkit-transform-origin : 100% 0%;
+-webkit-animation : rotate-shadow-l-02 1s 1s 1; 	
+-webkit-animation-fill-mode : both;
+-webkit-transform : rotateZ(0deg); }
+
+@-webkit-keyframes rotate-shadow-l-02 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+/*-webkit-transform : translate3d(09.765625%, 01.727116%, 0) rotateZ(-10deg); EDITED 2/27/2011*/		
+-webkit-transform : translate3d(100px, 10px, 0) rotateZ(-10deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #l-shin-02 {
+ left : 0;
+ top : -100px;
+ width : 327px;
+ height : 400px;
+-webkit-animation : rotate-shin-l-02 1s 500ms 1; 	
+-webkit-animation-fill-mode : both;
+-webkit-transform : rotateZ(0deg);
+-webkit-transform-origin : 100% 100%; }
+
+@-webkit-keyframes rotate-shin-l-02 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+/*-webkit-transform : translate3d(01.953125%,-05.181347%,0) rotateZ(20deg); EDITED 2/27/2011*/	
+-webkit-transform : translate3d(20px,-30px,0) rotateZ(20deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #l-foot-02 {
+ bottom : 0;
+ left : 0;
+ height : 418px;
+ width : 425px;
+-webkit-animation : rotate-foot-l-02 1s 500ms 1; 	
+-webkit-animation-fill-mode : both;
+-webkit-transform : rotateZ(0deg);
+-webkit-transform-origin : 100% 100%; }
+
+@-webkit-keyframes rotate-foot-l-02 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+/*-webkit-transform : translate3d(-07.8125%,0,0) rotateZ(20deg); EDITED 2/27/2011*/		
+-webkit-transform : translate3d(-80px,0,0) rotateZ(20deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #l-foot-tip {
+ bottom : 10px;
+ left : 300px;
+ height : 154px;
+ width : 227px; }
+
+/* 
+SCENE 03: As Don puts down his briefcase, we begin to get a sense that everything may not be as it seems in his world.
+*/
+
+.go h1#title-03 {
+ top : 500px;
+ left : 725px; }
+
+.go #bg-03 {
+ left : 0;
+ top : 0; }
+
+.go #multi-slats-03 {
+ left : 610px;
+ top : 0;
+-webkit-animation : multi-slats-03 2s 1s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes multi-slats-03 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 
+ 100% {
+-webkit-transform : translate3d(0,100px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #single-slat-03 { 
+ left : 612px;
+ top : 30px;	
+-webkit-animation : single-slats-03 2s 1500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes single-slats-03 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,150px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+
+.go #shadow-03 {
+ top : 540px;
+ left : 435px;
+-webkit-animation : suitcase-shadow-03 1s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes suitcase-shadow-03 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-out; }
+ 85% {
+-webkit-transform : translate3d(0,-135px,0);
+-webkit-animation-timing-function : ease; }
+ 100% {
+-webkit-transform : translate3d(0,-130px,0);
+-webkit-animation-timing-function : ease; }
+}
+
+.go #suitcase-03 {
+ top : -45px;
+ left : 435px;
+-webkit-animation : suitcase-03 1s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes suitcase-03 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 65% {
+-webkit-transform : translate3d(0,135px,0);
+-webkit-animation-timing-function : ease-out; }
+ 75% {
+-webkit-transform : translate3d(0,135px,0);
+-webkit-animation-timing-function: ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,130px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #arm-03 {
+ position : relative;
+ left : 570px;
+ top : -275px;
+ width : 110px;
+ height : 320px;
+-webkit-animation : arm-03 1800ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes arm-03 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease; }
+ 55% {
+-webkit-transform: translate3d(0,155px,0);
+-webkit-animation-timing-function : ease; }
+
+ 65% { /* A slight pause before the arm pulls back */
+-webkit-transform : translate3d(0,155px,0);
+-webkit-animation-timing-function: ease; }
+
+ 100% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #legs-03 {
+ left : -15px;
+ top : -15px; }
+
+/* 
+SCENE 04: Magazines begin falling to the floor. 
+*/
+
+.go #bg-04 {
+ left : 0;
+ top : 0; }
+ 
+.go #ad-a,
+.go #ad-b,
+.go #ad-c {
+ width : 160px;
+ height : 230px; }
+
+.go #ad-a {	
+ top : 130px;
+ left : 465px;
+ opacity : .65;
+-webkit-transform-origin : 50% 50%;
+-webkit-transform : rotateZ(-3deg);
+-webkit-animation : drop-posters-a-04 7s 1; 	
+-webkit-animation-fill-mode : both; }
+ 
+.go h1 {
+ top : 350px;
+ left : 125px; }
+
+@-webkit-keyframes drop-posters-a-04 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(-3deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,470px,0) rotateZ(-20deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+.go #ad-b {
+ left : 575px;
+ opacity : .65;
+ top : 340px;
+-webkit-transform-origin : 50% 50%;
+-webkit-transform: rotateZ(3deg);
+-webkit-animation: drop-posters-b-04 7s 150ms 1; 	
+-webkit-animation-fill-mode: both; }
+
+@-webkit-keyframes drop-posters-b-04 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(3deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,350px,0) rotateZ(30deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+.go #ad-c {
+ top : 10px;
+ left : 646px;
+ opacity : .65;
+ height : 260px;
+ width : 150px;
+-webkit-transform-origin : 50% 50%;
+-webkit-transform : rotateZ(-3deg);
+-webkit-animation : drop-posters-c-04 7s 100ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-posters-c-04 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(-3deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,700px,0) rotateZ(-30deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+/* 
+SCENE 05: As he stands motionless, helpless, the room falls apart around him and 
+Don realises that none of it’s real and that it’s impossible to tell where fiction stops and real life begins.
+*/
+
+.go #animation li:nth-of-type(5) {
+-webkit-transform : translate3d(0,0,0); /* 3d transform to force Safari to display all elements */ }
+
+.go h1#title-05-a {
+ top : 25px;
+ left : 75px;
+-webkit-animation : title-fadeout-05 2s 2s 1;
+-webkit-animation-fill-mode : both; }
+
+.go h1#title-05-b {
+ top : 75px;
+ left : 75px;
+ opacity : 0;
+-webkit-animation : title-fadein-05 1s 2s 1;
+-webkit-animation-fill-mode : both;
+ }
+
+@-webkit-keyframes title-fadeout-05 {
+ 0% { opacity : 1; }
+ 75% { opacity : 0; }
+ 100% { opacity : 0; }
+ }
+
+@-webkit-keyframes title-fadein-05 {
+ 0% { opacity : 0; }
+ 20% { opacity : 1; }
+ 100% { opacity : 1; }
+ }
+
+.go #bg-05 {
+ left : 0;
+ top : 0; }
+ 
+.go #lines-05 {
+ left : 0;
+ top : 272px; }
+
+.go #fan-05 {
+ left : 550px;
+ top : 256px;
+ width : 50px;
+ height : 58px; }
+
+.go #fan-blade-05 {
+ left : 5px;
+ top : 5px;
+ width : 40px;
+ height : 40px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : fan-rotate-01 18s 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes fan-rotate-01 {
+ 0% { -webkit-transform : rotateZ(0deg); }
+ 100% { -webkit-transform : rotateZ(900deg); }
+ }
+
+.go #books-05 {
+ left : 200px;
+ top : 240px;
+ width : 269px;
+ height : 80px;
+-webkit-transform-origin : 100% 100%;
+-webkit-animation : drop-books-05 7s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-books-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-in; }
+ 50% {
+-webkit-transform : translate3d(0,50px,0) rotateZ(-10deg);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform: translate3d(0,350px,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease; }
+}
+
+.go #lamp-05 {
+ left : 5px;
+ top : 165px;
+ width : 92px;
+ height : 342px;
+-webkit-transform-origin : 100% 100%;
+-webkit-animation : drop-lamps-05 7s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-lamps-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateX(0deg) skew(0deg,0deg);
+-webkit-animation-timing-function : ease-in; }
+ 90% {
+-webkit-transform : translate3d(0,0,0) rotateX(180deg) skew(-55deg,0deg);
+-webkit-animation-timing-function : ease; }
+ 100% {
+-webkit-transform : translate3d(0,100px,0) rotateX(180deg) skew(-55deg,0deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #chair-a-05 {
+ position : relative;
+ top : 350px; 
+ left : 400px; }
+ 
+.go #chair-b-05 {
+ position : relative;
+ top : 375px;
+ left : 550px; }
+ 
+.go #chair-slice-b-1-05 { 
+ top : 0;
+ left : 0; }
+ 
+.go #chair-slice-b-2-05 {
+ top : -16px;
+ left : 5px; }
+ 
+.go #chair-slice-b-3-05 {
+ top : -44px;
+ left : 61px; }
+
+.go #lights-a-05 {
+ top : -10px;
+ left : 35px;
+ width : 116px;
+ height : 51px;
+-webkit-transform-origin : 100% 100%;
+-webkit-animation : drop-light-05 7s 250ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #lights-b-05 {
+ top : 50px;
+ left : 313px;
+ width : 96px;
+ height : 31px; }
+
+.go #lights-c-05 {
+ top : 95px;
+ left : 480px;
+ width : 78px;
+ height : 22px;
+-webkit-transform-origin : 0 0;
+-webkit-animation : drop-light-05 7s 100ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #lights-d-05 {
+ top : 18px;
+ left : 735px;
+ width : 108px;
+ height : 36px;
+-webkit-transform-origin : 100% 0;
+-webkit-animation : drop-light-05 7s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-light-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,650px,0) rotateZ(-50deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #chair-shadow-b-05 {
+ top : 85px;
+ left : 5px; }
+
+.go #desk-shadow-05 {
+ top : 443px;
+ left : 150px;
+ width : 359px;
+ height : 67px;
+-webkit-transform-origin : 100% 0;
+-webkit-animation : drop-desk-shadow-05 5s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-desk-shadow-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,350px,0) rotateZ(-40deg);
+-webkit-animation-timing-function : ease; }
+ }
+ 
+.go #desk-top-05 {
+ top : 333px;
+ left : 155px;
+ width : 363px;
+ height : 16px;
+-webkit-transform-origin : 0% 100%;
+-webkit-animation: drop-desk-top-05 7s 100ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-desk-top-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform: translate3d(0,350px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #desk-side-05 {
+ top : 340px;
+ left : 150px;
+ width : 77px;
+ height : 114px;
+-webkit-transform-origin : 0% 100%;
+-webkit-animation : drop-desk-side-05 7s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-desk-side-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,350px,0) rotateZ(-60deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #desk-front-05 {
+ top : 338px;
+ left : 227px;
+ width : 301px;
+ height : 116px;
+-webkit-transform-origin : 100% 100%;
+-webkit-animation : drop-desk-front-05 7s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-desk-front-05 {
+ 0% {
+-webkit-transform: translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,370px,0) rotateZ(30deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #desk-legs-05 {
+ top : 417px;
+ left : 155px;
+ width : 359px;
+ height : 98px;
+-webkit-transform-origin : 100% 100%;
+-webkit-animation : drop-desk-05 7s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-desk-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,350px,0) rotateZ(-50deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #suitcase-05 {
+ z-index : 9100!important;
+ top : 475px;
+ left : 665px;
+-webkit-transform-origin : 100% 0;
+-webkit-animation : drop-desk-shadow-05 5s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #man-05 {
+ position : relative;
+ z-index : 9000!important;
+ top : 230px;
+ left : 700px; }
+
+.go #shade-a-05 {
+ top : 100px;
+ left : 187px; }
+ 
+.go #shade-b-05 {
+ top : 135px;
+ left : 360px; }
+ 
+.go #shade-c-05 {
+ top : 125px;
+ left : 654px; }
+
+.go #chair-slice-b-1-05 {
+ top : 0;
+ left : 0;
+-webkit-animation : drop-shade-05 8s 1100ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #chair-slice-b-2-05 {
+ top :-16px;
+ left : 5px;
+-webkit-animation : drop-shade-05 7s 100ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #chair-slice-b-3-05 {
+ top : -44px;
+ left : 61px;
+-webkit-animation : drop-shade-05 7s 300ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #chair-shadow-b-05 {
+ top : 85px;
+ left : 5px;
+-webkit-animation : drop-shade-05 5s 100ms 1; 	
+-webkit-animation-fill-mode: both; }
+
+.go #chair-slice-a-1-05 {
+ top : 0;
+ left : 0;
+-webkit-animation : drop-shade-05 8s 750ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #chair-slice-a-2-05 {
+ top : -1px;
+ left : 29px;
+-webkit-animation : drop-shade-05 6s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+#chair-slice-a-3-05 {
+ top : 16px;
+ left : 115px;
+-webkit-animation : drop-shade-05 7s 400ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #chair-shadow-a-05 {
+ top : 150px;
+ left : 5px;
+-webkit-animation : drop-shade-05 6s 350ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #shade-a-05,
+.go #shade-b-05,
+.go #shade-c-05{
+-webkit-animation : drop-shade-05 7s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-shade-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,550px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #blinds-a-05 {
+ top : 120px;
+ left : 195px;
+ width : 289px;
+ height : 229px;
+-webkit-transform-origin : 100% 100%;
+-webkit-animation : drop-blinds-05 6s 250ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+.go #blinds-b-05 {
+ top : 89px;
+ left : 528px;
+ width : 309px;
+ height : 245px;
+-webkit-transform-origin : 100% 100%;
+-webkit-animation : drop-blinds-05 6s 500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-blinds-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease-in; }
+ 100% {
+-webkit-transform : translate3d(0,500px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+#ads-a-05 {
+ opacity : .55;
+ top : 350px;
+ left : 900px;
+ height : 100px;
+ width : 60px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : drop-ads-a-05 4s 100ms 1; 	
+-webkit-animation-fill-mode : both;
+ }
+
+#ads-c-05{
+ opacity : .55;
+ top : 470px;
+ left : 925px;
+ height : 100px;
+ width : 60px;
+ background-color : rgb(200,200,200);
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : drop-ads-a-05 4s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-ads-a-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg) skew(5deg,-15deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,300px,0) rotateZ(30deg) skew(7deg,-25deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+#ads-b-05 {
+ opacity : .55;
+ top : 430px;
+ left : 870px;
+ height : 100px;
+ width : 60px;
+ background-color : rgb(200,200,200);
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : drop-ads-b-05 4s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes drop-ads-b-05 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg) skew(5deg,-15deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,300px,0) rotateZ(-30deg) skew(7deg,-25deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+#ads-a-05 img,
+#ads-b-05 img,
+#ads-c-05 img {
+ max-width : 100%; }
+
+/* 
+SCENE 06: The room melts away and Don starts fall, his arms are outstretched.
+*/
+
+.go #bg-06 {
+ top : 0;
+ left : 0; }
+
+.go #man-06 {
+ top : -200px;
+ left : -290px;
+ width : 1600px; 
+ height : 905px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : man-06 3s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-06 {
+ 0% {
+-webkit-transform : scale3d(1.5,1.5,1.5) translate3d(0,0,0) rotateZ(20deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : scale3d(.65,.65,.65) translate3d(0,50px,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+#blk-curtain-06 {
+ width : 100%;
+ height : 579px;
+ background-color : rgb(0,0,0); 
+-webkit-animation : fadeout-06 500ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes fadeout-06 {
+ 0% {
+ opacity : 1;
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+ opacity : 0;
+-webkit-animation-timing-function : ease-in; }
+ }
+
+/* 
+SCENE 07: As Don tumbles down, photographs from magazine advertisements merge with his own reflection.
+*/
+
+#scene-07 h1 {
+ top : 150px;
+ left : 75px; }
+
+
+
+.go #bldg-07 {
+ top:-50px;
+ left : 0;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : bldg-07 10s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-07 {
+0% {
+-webkit-transform: translate3d(0,0,0);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,-450px,0);
+-webkit-animation-timing-function : ease-out; }
+ }
+
+/*  ! EDITS 3/17/2011 !
+ adding mask to moving building*/
+
+.go #bldg-07 img {
+	-webkit-mask-image: url(../images/07-control-full-mask.gif);
+}
+
+.go #man-07 {
+ top : -250px;
+ left : 332px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : man-07 6s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-07 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(-60deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(250px,1000px,0) rotateZ(20deg);
+-webkit-animation-timing-function : ease-out; }
+ }
+
+/*  
+SCENE 08: Looking out from a building across the street, the helplessness of Don’s situation becomes clearer as he falls further and faster.
+*/
+
+.go h1#title-08-a {
+ top : 50px;
+ left : 75px;
+-webkit-animation : title-fadeout-08 2s 2s 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-fadeout-08 {
+ 0% { opacity : 1; }
+ 75% { opacity : 0; }
+ 100% { opacity : 0; }
+ }
+
+.go h1#title-08-b {
+ top : 125px;
+ left : 75px;
+-webkit-animation : title-fadein-08 1s 2s 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-fadein-08 {
+ 0% { opacity : 0; }
+ 20% { opacity : 1; }
+ 100% { opacity : 1; }
+ }
+
+.go #bg-08 {
+ top : 0;	
+ width : 1024px;
+ height : 909px;
+-webkit-transform-origin : 0% 50%;
+-webkit-animation : bldg-08 14s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-08 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease; }
+ 100% {
+-webkit-transform : translate3d(0,-330px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #man-08 {
+ top : 260px;
+ left : 566px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : man-08 8s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-08 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,325px,0) rotateZ(45deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+/* 
+SCENE 09: Don accepts his fate and relaxes as he falls. Behind him, photographs from magazine advertisements continue to reflect in the windows.
+*/
+
+.go h1#title-09-a {
+ top : 50px;
+ left : 625px;
+-webkit-animation : title-fadeout-09 1500ms 1500ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-fadeout-09 {
+ 0% { opacity : 1; }
+ 75% { opacity : 0; }
+ 100% { opacity : 0; }
+ }
+
+.go h1#title-09-b {
+ top : 150px;
+ left : 625px;
+-webkit-animation : title-fadein-09 750ms 1500ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-fadein-09 {
+ 0% { opacity : 0; }
+ 20% { opacity : 1; }
+ 100% { opacity : 1; }
+ }
+
+
+.go #bg-09 {
+ top : 0;	
+ width : 1417px;
+ height : 744px;
+-webkit-transform-origin : 0% 50%;
+-webkit-animation : bldg-09 3s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-09 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : linear; }
+ 100% {
+-webkit-transform : translate3d(-150px,-160px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #man-09 {
+ top : -200px;
+ left : 160px;
+-webkit-transform-origin: 50% 50%;
+-webkit-animation: man-09 3500ms 1; 	
+-webkit-animation-fill-mode: both;
+ }
+
+@-webkit-keyframes man-09 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(50px,820px,0) rotateZ(-20deg);
+-webkit-animation-timing-functio : ease; }
+ }
+
+/* 
+SCENE 10: Don is in free-fall. The images behind him merge into one continuous stream. Images of alcohol.
+*/
+
+.go h1#title-10-a {
+ top : 100px;
+ left : 650px;
+-webkit-animation : title-fadeout-10 750ms 1500ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-fadeout-10 {
+ 0% { opacity : 1; }
+ 75% { opacity : 0; }
+ 100% { opacity : 0; }
+ }
+
+.go h1#title-10-b {
+ top : 250px;
+ left : 650px;
+-webkit-animation : title-fadein-10 750ms 1500ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-fadein-10 {
+ 0% { opacity : 0; }
+ 20% { opacity : 1; }
+ 100% { opacity : 1; }
+ }
+
+.go #bg-10 {
+ top : 0;
+-webkit-transform-origin : 0% 50%;
+-webkit-animation : bldg-10 7s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-10 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease; }
+ 100% {
+-webkit-transform : translate3d(0,-700px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #man-10{
+ top : 50px;
+ left : 350px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : man-10 4500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-10 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,650px,0) rotateZ(-25deg);
+-webkit-animation-timing-function : ease; }
+ }
+
+/* 
+SCENE 11: Of wedding bands — things that are wrong and right in his life.
+*/
+
+.go h1#title-11-a {
+ top : 250px;
+ left : 600px; }
+
+.go #bg-11{
+ top : -15px;
+-webkit-transform-origin : 0% 50%;
+-webkit-animation : bldg-11 4000ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-11 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : ease; }
+ 100% {
+-webkit-transform : translate3d(0,-300px,0);
+-webkit-animation-timing-function : linear; }
+ }
+
+.go #man-11 { 
+ top : 30px;
+ left : 375px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : man-11 3500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-11 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,700px,0) rotateZ(15deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+/* 
+SCENE 12:Glamourous women.
+*/
+
+.go #bg-12{
+-webkit-transform-origin : 0% 50%;
+-webkit-animation : bldg-12 3s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-12 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : linear; }
+ 100% {
+-webkit-transform : translate3d(0,-1000px,0);
+-webkit-animation-timing-function : ease; }
+ }
+
+.go #man-12 {
+ top : -150px;
+ left : 265px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : man-12 3500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-12 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(10px,600px,0) rotateZ(10deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+/* 
+SCENE 13: Happy families.
+*/
+
+#scene-13 h1 {
+ top : 150px;
+ left : 600px; }
+
+.go #bldg-blk {
+ top : 0;
+ left : 0; }
+
+
+/*  ! EDITS 3/18/2011 !
+ fixed timing so that building in foreground moves faster than building in the background*/
+
+.go #bg-13a {
+ top : 0;
+ left : 0;
+ width : 1024px;
+ height : 1227px;
+ opacity : .65;
+-webkit-transform-origin : 0 50%;
+-webkit-animation : bldg-a-13 4000ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-a-13 {
+ 0% {
+-webkit-transform: translate3d(0,0,0);
+-webkit-animation-timing-function : linear; }
+ 100% {
+-webkit-transform : translate3d(0,-600px,0);
+-webkit-animation-timing-function : linear; }
+ }
+
+.go #bg-13b{
+ top : 0;
+ left : 275px;
+ width : 754px;
+ height : 1227px;
+ opacity : .65;
+-webkit-transform-origin : 0 50%;
+-webkit-animation : bldg-b-13 3200ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-b-13 {
+ 0% {
+-webkit-transform : translate3d(0,0,0);
+-webkit-animation-timing-function : linear; }
+ 100% {
+-webkit-transform : translate3d(0,-600px,0);
+-webkit-animation-timing-function : linear; }
+ }
+
+.go #man-13{
+ left : 450px;
+ top : 0;
+ width : 106px;
+ height : 107px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : man-13 3500ms 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-13 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) rotateZ(0deg);
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(0,600px,0) rotateZ(-15deg);
+-webkit-animation-timing-function : ease-in; }
+ }
+
+/* 
+SCENE 14: As reality fades away, all that’s left are images from an unreal world, spiralling out of control. 
+*/
+
+#scene-14 h1 {
+ left : 260px;
+ top : 265px;
+-webkit-animation : title-fadeout-14 1500ms 2000ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-fadeout-14 {
+ 0% { opacity : 1; }
+ 75% { opacity : 0; }
+ 100% { opacity : 0; }
+ }
+
+/*  ! EDITS 2/23/2011 !
+ adding style and animation for scene 14 background
+*/
+.go #bg-14 {
+ top : -0;
+ left : -0;
+ width : 1024px;
+ height : 576px;
+-webkit-transform-origin : 50% 50%;
+-webkit-animation : bldg-14 2s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes bldg-14 {
+ 0% {
+-webkit-transform : scale3d(1,1,1);
+-webkit-animation-timing-function : linear; }
+ 100% {
+-webkit-transform : scale3d(1.15,1.15,1.15);
+-webkit-animation-timing-function : linear; }
+ }
+/*  ! END EDITS 2/23/2011 ! */
+
+
+/* 
+SCENE 15: Don accepts his fate, that his work and his life are one and the same. 
+*/
+
+.go #bg-15 {
+ top : -160px;
+ left : -200px;
+ width : 1488px;
+ height : 1047px; }
+
+
+/*  ! EDITS 2/23/2011 !
+ increased falling time by .5 sec*/
+.go #man-15 {	
+ top : 0;
+ left : 300px;
+ width : 708px;
+ height : 657px;
+-webkit-transform-origin : 50% 50%;
+/*-webkit-animation : man-15 2500ms 1;*/
+-webkit-animation : man-15 3000ms 1; 	
+-webkit-animation-fill-mode : both; }
+/*  ! END EDITS 2/23/2011 ! */
+
+
+
+/*  ! EDITS 2/23/2011 !
+ adjusting easing of the man so he doesnt have that weird pause while falling*/
+@-webkit-keyframes man-15 {
+ 0% {
+-webkit-transform : translate3d(0,0,0) scale3d(.85,.85,.85) rotateZ(0deg);
+/*-webkit-animation-timing-function : ease-in;*/
+-webkit-animation-timing-function : ease-out; }
+ 100% {
+-webkit-transform : translate3d(1000px,1000px,0) scale3d(12,12,12) rotateZ(45deg);
+/*-webkit-animation-timing-function : ease;*/
+-webkit-animation-timing-function : ease-in; }
+ }
+/*  ! END EDITS 2/23/2011 ! */
+
+
+/* 
+SCENE 16: He sits, his arm outstretched across the back of a chair. A cigarette between his fingers.
+*/
+
+#bg-16 {
+ top : 0;
+ left : 0; }
+
+
+
+/*  ! EDITS 2/23/2011 !
+I'm not sure what was wrong with the title animation ... I couldnt get the original css to work, I thought it might have been a syntax error so I just rewrote the code, ths time it worked!  */
+
+.go h1#title-16-a {
+ font-size : 4.5em;
+ left : 550px;
+ top : 265px; 
+}
+
+.go h1#title-16-a span.title-mad {
+ position : relative;
+ top : 0px;
+-webkit-animation : title-mad-16 4s 2500ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-mad-16 {
+ 0% { opacity : 0; top : -40px; }
+ 100% { opacity : 1; top : 0px; }
+	}
+
+.go h1#title-16-a span.title-men {
+ position : relative;
+ top : 0px;
+ color : rgb(0,0,0);
+-webkit-animation : title-men-16 4s 2500ms 1;
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes title-men-16 {
+ 0% { opacity : 0; top : 40px;}
+ 100% { opacity : 1; top : 0px;}
+	}
+/* ! END EDITS 2/23/2011 ! */
+
+
+#man-16 {
+ left : 60px;
+ top : 160px;
+-webkit-transform-origin : 50% 0%;
+-webkit-animation : man-16 5s 1; 	
+-webkit-animation-fill-mode : both; }
+
+@-webkit-keyframes man-16 {
+ 0% { 
+-webkit-transform : translate3d(-240px,-1140px,0) scale3d(4,4,4);
+-webkit-animation-timing-function : ease-out; }
+ 100% { 
+-webkit-transform : translate3d(0,0,0) scale3d(1,1,1);
+-webkit-animation-timing-function : ease-in-out; }
+ }
+
+
+/* MEDIA QUERIES */
+
+@media screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 768px) 
+and (orientation : landscape),
+screen and (max-width : 1024px) {
+
+.cssanimations #animation {
+ position : absolute!important;
+ top : 80px!important;
+ left : 20px!important;
+ margin : 0!important;
+-webkit-transform : scale(.8789)!important; /* 900 / 1024 = .8789 */ 
+-webkit-transform-origin : 0 0!important; }
+
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait),
+screen and (max-width : 768px) { 
+
+.cssanimations #animation {
+ position : absolute!important;
+ top : 160px!important;
+ left : 20px!important;
+ margin : 0!important; 
+-webkit-transform : scale(.664)!important; /* 680 / 1024 = .664 */ 
+-webkit-transform-origin : 0 0!important; }
+
+ } 
+
+/* 480px */
+
+@media handheld and (max-width : 480px),
+screen and (max-device-width : 480px),
+screen and (max-width : 480px) {
+
+ html.cssanimations  {
+ background-color : rgb(40,40,40)!important; 
+ color : rgb(230,230,230)!important; }
+ 
+.cssanimations header[role="banner"] h1 {
+ font-size : 3em; }
+
+.cssanimations header[role="banner"] h1 span {
+ color : rgb(230,230,230)!important; }
+ 
+.cssanimations header[role="banner"] h1 a {
+ color : rgb(181,22,27)!important; }
+
+.cssanimations #animation {
+position : absolute!important;
+top : 140px!important;
+left : 20px!important;
+margin : 0!important; 
+-webkit-transform : scale(.3906)!important; /* 400 / 1024 = .3906 */ 
+-webkit-transform-origin : 0 0!important; }
+
+.cssanimations footer[role="contentinfo"] {
+ position : absolute!important;
+ top : 400px!important;
+ left : 20px!important; }
+
+}

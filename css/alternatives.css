@@ -1,0 +1,349 @@
+/* ------------------------------------------------------------------
+
+Madmanimation by Anthony Calzadilla with hindrance from Andy Clarke
+
+------------------------------------------------------------------ */
+
+@import url(reset.css);
+
+/* COMMON STYLES */
+
+ html {
+ background-color : rgb(230,230,230); }
+
+ body {
+ overflow-x : hidden;
+ padding : 25px;
+ background-color : transparent; 
+ color : rgb(40,40,40); 
+ font : 100%/1.4 "Helvetica Neue", Helvetica, Arial; }
+
+/* TYPOGRAPHY */
+
+ h1 {
+ font-weight : normal;
+ text-transform : uppercase; }
+
+ h1 span {
+ color : rgb(0,0,0); }
+
+ h1 em {
+ font-style : normal;
+ font-weight : normal;
+ font-size : .85em; }
+ 
+ header[role="banner"],
+#animation,
+ footer[role="contentinfo"] {
+ margin : 0 auto;
+ padding : 0; }
+ 
+ header[role="banner"],
+ footer[role="contentinfo"] {
+ width : 80%; 
+ max-width : 1024px; }
+
+ header[role="banner"] h1 {
+ margin-bottom : .25em;
+ font-size : 4em;
+ color : rgb(255,255,255);
+ letter-spacing : -2px;
+ line-height : 1;
+ text-align : center; }
+
+ ol, p, small {
+ margin-bottom : 1.5em;
+ font-size : .75em; /* 12 / 16 = .75 */ }
+ 
+ li p {
+ font-size : 1em; }
+ 
+ footer p:last-of-type,
+ footer p:last-of-type a {
+ color : rgb(160,160,160);  }
+
+ a, a:visited {
+ outline : none;
+ color : rgb(181,22,27);
+ font-weight : bold;
+ text-decoration : none; }
+ 
+ a:hover { 
+ color : rgb(181,22,27); 
+ text-decoration : none; }
+ 
+ a:active, a:focus { 
+ position : relative; 
+ top : 1px; 
+ color : rgb(181,22,27);
+ text-decoration : none; }
+ 
+ header h1 a {
+ font-weight : normal; }
+ 
+/* WHEN CSS ANIMATIONS ARE SUPPORTED */
+
+/* LAYOUT */
+
+.cssanimations #animation {
+ width : 1024px;
+ height : 579px;
+ margin-bottom : 3em; 
+ padding : 0;
+ background : url(../images/00.png) no-repeat 0 0; }
+
+.cssanimations #animation li { 
+ display : none; }
+
+.cssanimations #animation li.go { 
+ display : block; 
+ position : relative;
+ overflow : hidden;
+ width : 100%;
+ height : 579px; 
+ background-color : rgb(255,255,255); } 
+
+.cssanimations #animation img,
+.cssanimations #animation div {
+ position : absolute; }
+
+.cssanimations #animation li h1 {
+ position : absolute;
+ z-index : 1000000;
+ font-size : 2em;
+ color : rgb(0,0,0); }
+ 
+.cssanimations #animation li h1 span {
+  color : rgb(181,22,27); }
+
+.cssanimations #animation li div {
+ display : block; }
+
+.cssanimations #animation li p {
+ position : absolute;
+ top : -1000px;
+ left : -1000px;
+ visibility : hidden;
+ height : 1px;
+ width : 1px;
+ margin : 0;
+ overflow : hidden; }
+
+/* WHEN CSS ANIMATIONS ARE NOT SUPPORTED */
+
+.no-cssanimations header[role="banner"] h1 b {
+ color : rgb(181,22,27); }
+ 
+.no-cssanimations header[role="banner"],
+.no-cssanimations footer[role="contentinfo"] {
+ width : 80%;
+ max-width : 1024px; }
+ 
+.no-cssanimations footer[role="contentinfo"] {
+ padding-top : 1.5em;
+ border-top : 3px solid rgb(200,200,200); }
+
+.no-cssanimations #animation {
+ list-style-type : none; 
+ overflow : hidden; 
+ width : 80%;
+ min-width : 640px;
+ max-width : 1024px; }
+
+.no-cssanimations #animation li {
+ float : left;
+ margin : 0 4% 1.5em 0; /* 40 / 920 = .0474 */
+ padding-top : 130px;
+ min-height : 10em;
+ width : 21%; /* 200 / 920 = .2173 */ 
+ background-repeat : no-repeat;
+ background-position : 0 0; }
+
+.no-cssanimations #animation li p {
+ display : block; 
+ margin-bottom : 0; }
+ 
+.no-cssanimations #scene-01 {
+ background-image : url(../images/no-cssanimations/scene-01.jpg); }
+ 
+.no-cssanimations #scene-02 {
+ background-image : url(../images/no-cssanimations/scene-02.jpg); }
+ 
+.no-cssanimations #scene-03 {
+ background-image : url(../images/no-cssanimations/scene-03.jpg); }
+ 
+.no-cssanimations #scene-04 {
+ background-image : url(../images/no-cssanimations/scene-04.jpg); }
+ 
+.no-cssanimations #scene-05 {
+ background-image : url(../images/no-cssanimations/scene-05.jpg); }
+ 
+.no-cssanimations #scene-06 {
+ background-image : url(../images/no-cssanimations/scene-06.jpg); }
+ 
+.no-cssanimations #scene-07 {
+ background-image : url(../images/no-cssanimations/scene-07.jpg); }
+ 
+.no-cssanimations #scene-08 {
+ background-image : url(../images/no-cssanimations/scene-08.jpg); }
+ 
+.no-cssanimations #scene-09 {
+ background-image : url(../images/no-cssanimations/scene-09.jpg); }
+  
+.no-cssanimations #scene-10 {
+ background-image : url(../images/no-cssanimations/scene-10.jpg); }
+ 
+.no-cssanimations #scene-11 {
+ background-image : url(../images/no-cssanimations/scene-11.jpg); }
+ 
+.no-cssanimations #scene-12 {
+ background-image : url(../images/no-cssanimations/scene-12.jpg); }
+ 
+.no-cssanimations #scene-13 {
+ background-image : url(../images/no-cssanimations/scene-13.jpg); }
+ 
+.no-cssanimations #scene-14 {
+ background-image : url(../images/no-cssanimations/scene-14.jpg); }
+ 
+.no-cssanimations #scene-15 {
+ background-image : url(../images/no-cssanimations/scene-15.jpg); }
+ 
+.no-cssanimations #scene-16 {
+ background-image : url(../images/no-cssanimations/scene-16.jpg); }
+ 
+/* WHEN JAVASCRIPT IS NOT SUPPORTED */
+
+.no-js {
+ background-color : rgb(255,255,255); }
+ 
+.no-js header[role="banner"],
+.no-js #animation,
+.no-js footer[role="contentinfo"] {
+ margin : 0 auto;
+ padding : 0;
+ width : 60%; }
+
+.no-js header[role="banner"] a,
+.no-js #animation h1,
+.no-js #animation li div {
+ display : none }
+ 
+.no-js header[role="banner"] h1 {
+ font-weight : bold; }
+ 
+.no-js header[role="banner"] h1 b {
+ color : rgb(181,22,27); }
+ 
+.no-js #animation {
+ list-style-type : decimal;
+ margin-bottom : 3em; }
+ 
+.no-js ol, .no-js p, .no-js small {
+ font-size : 1em; /* 16 / 16 = .75 */ }
+ 
+.no-js footer[role="contentinfo"] {
+ padding-top : 1.5em;
+ border-top : 3px solid rgb(200,200,200); }
+
+/* VENDOR-SPECIFIC */
+
+ html { 
+-webkit-box-sizing : border-box;
+-moz-box-sizing : border-box;
+-o-box-sizing : border-box;
+ box-sizing : border-box; }
+ 
+.cssanimations #animation,
+.no-cssanimations #animation li {
+-webkit-background-size : 100% auto;
+-moz-background-size : 100% auto;
+-o-background-size : 100% auto;
+ background-size : 100% auto; }
+ 
+/* MODERNIZR */
+ 
+/* font-face */
+ 
+@font-face {
+ font-family : 'TradeGothicLTStdBold';
+ src : url('../fonts/tradegothicltstd-bold-webfont.eot');
+ src : local('☺'), 
+ url('../fonts/tradegothicltstd-bold-webfont.woff') format('woff'), 
+ url('../fonts/tradegothicltstd-bold-webfont.ttf') format('truetype'), 
+ url('../fonts/tradegothicltstd-bold-webfont.svg#webfontRVqlUeQN') format('svg');
+ font-weight : normal;
+ font-style : normal; }
+ 
+/* fontface */
+ 
+.fontface h1 {
+ font-family : "TradeGothicLTStdBold"; }
+ 
+ /* MEDIA QUERIES */
+ 
+@media screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 768px) 
+and (orientation : landscape),
+screen and (max-width : 1024px) {
+ 
+ html {
+ background-color : rgb(40,40,40)!important; 
+ color : rgb(230,230,230)!important; }
+ 
+ body {
+ position : relative!important;
+ max-width : 1024px!important;
+ margin : 0 auto;
+ padding : 10px 0 0 0!important; }
+ 
+ header[role="banner"] h1 span {
+ color : rgb(230,230,230)!important; }
+  
+ p,
+ small {
+ color : rgb(230,230,230)!important; }
+ 
+ footer[role="contentinfo"] a {
+ color : rgb(255,255,255)!important; }
+ 
+.cssanimations footer[role="contentinfo"] {
+ position : absolute!important;
+ top : 620px!important;
+ left : 20px!important; }
+  
+ } 
+ 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait),
+screen and (max-width : 768px) { 
+
+ html {
+ background-color : rgb(181,22,27)!important; 
+ color : rgb(40,40,40)!important; }
+ 
+ body {
+ position : relative!important;
+ max-width : 768px!important;
+ margin : 0 auto;
+ padding : 10px 0 0 0!important; }
+ 
+ header[role="banner"] h1 span {
+ color : rgb(40,40,40)!important; }
+ 
+ header[role="banner"] h1 a {
+ color : rgb(230,230,230)!important; }
+ 
+ .no-cssanimations header[role="banner"] h1 b {
+ color : rgb(255,255,255); }
+ 
+ p,
+ small {
+ color : rgb(230,230,230)!important; }
+ 
+ footer[role="contentinfo"] a {
+ color : rgb(255,255,255)!important; }
+
+ }
